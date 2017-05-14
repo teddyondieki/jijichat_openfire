@@ -706,10 +706,11 @@ public abstract class StanzaHandler {
     abstract boolean createSession(String namespace, String serverName, XmlPullParser xpp, Connection connection)
             throws XmlPullParserException;
 
-    // added to check whether the client is JijiChat mobile
-    private boolean validateJijiChatClient(final XmlPullParser xpp) {
+		// added to check whether the client is JijiChat mobile
+		private boolean validateJijiChatClient(final XmlPullParser xpp) {
         String from = xpp.getAttributeValue("", "from");
-// Added
+		
+		// Added
         try {
             int clientVersion = Integer.parseInt(xpp.getAttributeValue("", "client-ver"));
             String key = xpp.getAttributeValue("", "key");
@@ -722,9 +723,10 @@ public abstract class StanzaHandler {
             return false;
         }
         return true;
-// End of added
+		// End of added
     }
 
+	// Added
     private static String md5(String data) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
@@ -738,6 +740,7 @@ public abstract class StanzaHandler {
         }
     }
 
+	// Added
     public static final String bytesToHex(final byte[] buff) {
         StringBuilder res = new StringBuilder();
         for (byte b : buff) {
