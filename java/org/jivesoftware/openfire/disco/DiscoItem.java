@@ -24,7 +24,7 @@ import org.xmpp.resultsetmanagement.Result;
 
 /**
  * An item is associated with an XMPP Entity, usually thought of a children of
- * the parent entity and normally are addressable as a JID.<p> 
+ * the parent entity and normally are addressable as a JID.<p>
  *
  * An item associated with an entity may not be addressable as a JID. In order
  * to handle such items, Service Discovery uses an optional 'node' attribute
