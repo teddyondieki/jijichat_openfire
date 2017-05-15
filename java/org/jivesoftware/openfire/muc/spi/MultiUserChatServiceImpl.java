@@ -319,7 +319,7 @@ public class MultiUserChatServiceImpl implements Component, MultiUserChatService
             } else if (packet instanceof Message) {
                 Message msg = (Message) packet;
 
-                // ADDED
+                // Added
                 // Add the delay information to the message
                 Element delayInformation = msg.addChildElement("delay", "urn:xmpp:delay");
                 Date current = new Date();
